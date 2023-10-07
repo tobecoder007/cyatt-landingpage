@@ -51,7 +51,6 @@ function handleNav() {
   }
 }
 
-
 for (let i = 0; i < menu.length; i++) {
   menu[i].addEventListener("click", handleNav);
 }
@@ -77,8 +76,6 @@ function rotate() {
   }
   rotateElm = !rotateElm;
 }
-
-
 
 // Logo slider
 const swiper1 = new Swiper(".swiper1", {
@@ -112,9 +109,39 @@ const swiper1 = new Swiper(".swiper1", {
   },
 });
 
-
 // Testimonial Slider
+// const swiper = new Swiper(".swiper", {
+//   // Optional parameters
+//   direction: "horizontal",
+//   loop: true,
+//   autoplay: {
+//     delay: 3000,
+//     disableOnInteraction: false,
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
 
+//   // If we need pagination
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+
+//   // And if we need scrollbar
+//   scrollbar: {
+//     el: ".swiper-scrollbar",
+//   },
+// });
+
+// Pricing Card
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
@@ -146,8 +173,19 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// Roll over 
+(() => {
+  const swiperSliders = swiper[0].slides;
 
+  const slidersHeight = swiperSliders.map((swiper) => swiper.clientHeight);
+
+  swiper[0].on("activeIndexChange", (swiper) => {
+    const activeIndex = swiper.realIndex;
+
+    swiper.el.style.height = slidersHeight[activeIndex] + 100 + "px";
+  });
+})();
+
+// Roll over
 const swiper2 = new Swiper(".swiper2", {
   draggable: true,
   freemode: true,
@@ -356,49 +394,4 @@ virtualRadio.addEventListener("change", function () {
 inOfficeRadio.addEventListener("change", function () {
   inOfficeOption.style.backgroundColor = "#c9f31d";
   virtualOption.style.backgroundColor = "transparent";
-});
-
-// mobile view
-
-const basicRadio = document.getElementById("basicRadio");
-const standardRadio = document.getElementById("standardRadio");
-const premiumRadio = document.getElementById("premiumRadio");
-
-const basicOption = document.getElementById("basicOption");
-const standardOption = document.getElementById("standardOption");
-const premiumOption = document.getElementById("premiumOption");
-
-const basicPlan = document.getElementById("basicPlan");
-basicRadio.addEventListener("change", function () {
-  basicOption.style.backgroundColor = "#c9f31d";
-  standardOption.style.backgroundColor = "#fff";
-  premiumOption.style.backgroundColor = "#fff";
-  if (basicPlan.classList.contains("hide")) {
-    basicPlan.classList.remove("hide");
-    standardPlan.classList.add("hide");
-    premiumPlan.classList.add("hide");
-  }
-});
-const standardPlan = document.getElementById("standardPlan");
-standardRadio.addEventListener("change", function () {
-  standardOption.style.backgroundColor = "#c9f31d";
-  basicOption.style.backgroundColor = "#fff";
-  premiumOption.style.backgroundColor = "#fff";
-  if (standardPlan.classList.contains("hide")) {
-    standardPlan.classList.remove("hide");
-    ``;
-    basicPlan.classList.add("hide");
-    premiumPlan.classList.add("hide");
-  }
-});
-const premiumPlan = document.getElementById("premiumPlan");
-premiumRadio.addEventListener("change", function () {
-  premiumOption.style.backgroundColor = "#c9f31d";
-  basicOption.style.backgroundColor = "#fff";
-  standardOption.style.backgroundColor = "#fff";
-  if (premiumPlan.classList.contains("hide")) {
-    premiumPlan.classList.remove("hide");
-    standardPlan.classList.add("hide");
-    basicPlan.classList.add("hide");
-  }
 });
