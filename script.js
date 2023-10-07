@@ -172,7 +172,6 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-scrollbar",
   },
 });
-
 (() => {
   const swiperSliders = swiper[0].slides;
 
