@@ -108,50 +108,80 @@ const swiper1 = new Swiper(".swiper1", {
     el: ".swiper-scrollbar",
   },
 });
-
-// Testimonial Slider
-// const swiper = new Swiper(".swiper", {
-//   // Optional parameters
-//   direction: "horizontal",
-//   loop: true,
-//   autoplay: {
-//     delay: 3000,
-//     disableOnInteraction: false,
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-
-//   // If we need pagination
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: ".swiper-scrollbar",
-//   },
-// });
-
-// Pricing Card
-const swiper = new Swiper(".swiper", {
+// portfolioswiper
+const portfolioswiper = new Swiper(".portfolioswiper", {
   // Optional parameters
   direction: "horizontal",
-  slidesPerView: 1,
-  initialSlide: 1,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
+// Testimonial Slider
+const testimonialswiper = new Swiper(".testimonialswiper", {
+  // Optional parameters
+  direction: "horizontal",
   loop: true,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
+
+// Pricing Card
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  // slidesPerView: 1,
+  // initialSlide: 1,
+  // loop: true,
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -229,6 +259,7 @@ function formValidate() {
   let trimName = username.trimStart();
   let useremail = document.getElementById("email").value;
   let usercontact = document.getElementById("contact").value;
+  console.log({ usercontact });
 
   let nameErr = document.getElementById("error-name");
   let emailErr = document.getElementById("error-email");
@@ -257,7 +288,6 @@ function formValidate() {
   } else {
     emailErr.innerText = "";
   }
-
   if (!usercontact) {
     contactErr.innerText = "Phone Number is required";
   } else if (phoneR == false) {
