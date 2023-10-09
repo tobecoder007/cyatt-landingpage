@@ -185,8 +185,8 @@ const swiper = new Swiper(".swiper", {
     swiper.el.style.height = slidersHeight[activeIndex] + 100 + "px";
   });
 })();
-const swiperNext = document.querySelector(".swiper").swiper;
-swiperNext.slideNext();
+const swiperSlideNext = document.querySelector(".swiper").swiper;
+swiperSlideNext.slideNext();
 
 // Roll over
 const swiper2 = new Swiper(".swiper2", {
