@@ -109,42 +109,13 @@ const swiper1 = new Swiper(".swiper1", {
   },
 });
 
-// Testimonial Slider
-// const swiper = new Swiper(".swiper", {
-//   // Optional parameters
-//   direction: "horizontal",
-//   loop: true,
-//   autoplay: {
-//     delay: 3000,
-//     disableOnInteraction: false,
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-
-//   // If we need pagination
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: ".swiper-scrollbar",
-//   },
-// });
 
 // Pricing Card
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
+  slidesPerView: 1,
+  initialSlide: 1,
   loop: true,
   autoplay: {
     delay: 3000,
@@ -183,6 +154,8 @@ const swiper = new Swiper(".swiper", {
     swiper.el.style.height = slidersHeight[activeIndex] + 100 + "px";
   });
 })();
+const swiperSlideNext = document.querySelector(".swiper").swiper;
+swiperSlideNext.slideNext();
 
 // Roll over
 const swiper2 = new Swiper(".swiper2", {
@@ -394,3 +367,4 @@ inOfficeRadio.addEventListener("change", function () {
   inOfficeOption.style.backgroundColor = "#c9f31d";
   virtualOption.style.backgroundColor = "transparent";
 });
+
