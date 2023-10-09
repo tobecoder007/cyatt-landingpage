@@ -145,6 +145,8 @@ const swiper1 = new Swiper(".swiper1", {
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
+  slidesPerView: 1,
+  initialSlide: 1,
   loop: true,
   autoplay: {
     delay: 3000,
@@ -183,6 +185,8 @@ const swiper = new Swiper(".swiper", {
     swiper.el.style.height = slidersHeight[activeIndex] + 100 + "px";
   });
 })();
+const swiperNext = document.querySelector(".swiper").swiper;
+swiperNext.slideNext();
 
 // Roll over
 const swiper2 = new Swiper(".swiper2", {
