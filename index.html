@@ -14,158 +14,159 @@
     rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="./style.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
-<style>
-  @keyframes upper {
-    0% {
-      transform: translate(-4px, -4px);
+  <style>
+    @keyframes upper {
+      0% {
+        transform: translate(-4px, -4px);
+      }
+  
+      50% {
+        transform: translate(-16px, -16px);
+      }
+  
+      100% {
+        transform: translate(-4px, -4px);
+      }
     }
-
-    50% {
-      transform: translate(-16px, -16px);
+  
+    @keyframes lower {
+      0% {
+        transform: translate(4px, 4px);
+      }
+  
+      50% {
+        transform: translate(16px, 16px);
+      }
+  
+      100% {
+        transform: translate(4px, 4px);
+      }
     }
-
-    100% {
-      transform: translate(-4px, -4px);
-    }
-  }
-
-  @keyframes lower {
-    0% {
+  
+    .cards.one {
       transform: translate(4px, 4px);
+      z-index: 1;
     }
-
-    50% {
-      transform: translate(16px, 16px);
+  
+    .cards.two {
+      transform: translate(-4px, -4px);
+      z-index: 2;
+      transition: 1s all;
     }
-
-    100% {
-      transform: translate(4px, 4px);
+  
+    .card-container:hover .cards.one {
+      animation-name: lower;
+      animation-duration: 1s;
+      z-index: 2;
     }
-  }
-
-  .cards.one {
-    transform: translate(4px, 4px);
-    z-index: 1;
-  }
-
-  .cards.two {
-    transform: translate(-4px, -4px);
-    z-index: 2;
-    transition: 1s all;
-  }
-
-  .card-container:hover .cards.one {
-    animation-name: lower;
-    animation-duration: 1s;
-    z-index: 2;
-  }
-
-  .card-container:hover .cards.two {
-    animation-name: upper;
-    animation-duration: 1s;
-    z-index: 1;
-  }
-
-  /* .swiper-slide{
-      height: 650px;
-    }*/
-
-  .swiper-slide-active {
-    height: 100%;
-  }
-
-  .swiper-wrapper {
-    transition-timing-function: linear;
-  }
-
-  .swiper-pagination {
-    position: relative;
-  }
-
-  .swiper-pagination-bullet {
-    border-radius: 0;
-    width: 100px;
-    height: 40px;
-    color: #000;
-    background-color: #c6c6c6;
-    border: 1px solid #c6c6c6;
-    padding: 5px 0px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-  }
-
-  .swiper-pagination-bullet:nth-child(1):before {
-    content: "Basic";
-  }
-
-  .swiper-pagination-bullet:nth-child(2):before {
-    content: "Advanced";
-  }
-
-  .swiper-pagination-bullet:nth-child(3):before {
-    content: "Professional";
-  }
-
-  .swiper-pagination-bullet-active {
-    background-color: #c9f31d;
-  }
-  .portfolioSwiper .swiper-pagination-bullet {
-      display: none;
+  
+    .card-container:hover .cards.two {
+      animation-name: upper;
+      animation-duration: 1s;
+      z-index: 1;
     }
-
-    .portfolioSwiper .swiper-pagination-bullet-active {
-      width: 150px;
-      display: inline-block;
-      justify-content: center;
-      align-items: center;
+  
+    /* .swiper-slide{
+        height: 650px;
+      }*/
+  
+    .swiper-slide-active {
+      height: 100%;
     }
-
+  
+    .swiper-wrapper {
+      transition-timing-function: linear;
+    }
+  
+    .swiper-pagination {
+      position: relative;
+    }
+  
+    .swiper-pagination-bullet {
+      border-radius: 0;
+      width: 100px;
+      height: 40px;
+      color: #000;
+      background-color: #c6c6c6;
+      border: 1px solid #c6c6c6;
+      padding: 5px 0px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+  
+    .swiper-pagination-bullet:nth-child(1):before {
+      content: "Basic";
+    }
+  
+    .swiper-pagination-bullet:nth-child(2):before {
+      content: "Advanced";
+    }
+  
+    .swiper-pagination-bullet:nth-child(3):before {
+      content: "Professional";
+    }
+  
     .swiper-pagination-bullet-active {
       background-color: #c9f31d;
     }
-    .portfolioSwiper .swiper-pagination-bullet:nth-child(1):before {
-      content: "BRANDING";
-    }
-    .portfolioSwiper .swiper-pagination-bullet:nth-child(2):before {
-      content: "BRANDING";
-    }
-    .portfolioSwiper .swiper-pagination-bullet:nth-child(3):before {
-      content: "DESIGN";
-    }
-    .portfolioSwiper .swiper-pagination-bullet:nth-child(4):before {
-      content: "MARKETING";
-    }
-    .portfolioSwiper .swiper-pagination-bullet:nth-child(5):before {
-      content: "LOGO DESIGN";
-    }
-    .portfolioSwiper .swiper-pagination-bullet:nth-child(6):before {
-      content: "LOGO DESIGN";
-    }
-    .portfolioSwiper .swiper-pagination-bullet:nth-child(7):before {
-      content: "SOCIAL MEDIA";
-    }
-    .portfolioSwiper .swiper-pagination-bullet:nth-child(8):before {
-      content: "UI/UX";
-    }
-    .portfolioSwiper .swiper-pagination-bullet:nth-child(9):before {
-      content: "UI/UX";
-    }
-    .portfolioSwiper .swiper-pagination-bullet:nth-child(10):before {
-      content: "UI/UX";
-    }
-    .portfolioSwiper .swiper-pagination-bullet:nth-child(11):before {
-      content: "DEVELOPMENT";
-    }
-    .portfolioSwiper .swiper-pagination-bullet:nth-child(12):before {
-      content: "DEVELOPMENT";
-    }
-    .portfolioSwiper .swiper-pagination-bullet:nth-child(13):before {
-      content: "DEVELOPMENT";
-    }
-</style>
+    .portfolioSwiper .swiper-pagination-bullet {
+        display: none;
+      }
+  
+      .portfolioSwiper .swiper-pagination-bullet-active {
+        width: 150px;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .swiper-pagination-bullet-active {
+        background-color: #c9f31d;
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(1):before {
+        content: "BRANDING";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(2):before {
+        content: "BRANDING";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(3):before {
+        content: "DESIGN";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(4):before {
+        content: "MARKETING";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(5):before {
+        content: "LOGO DESIGN";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(6):before {
+        content: "LOGO DESIGN";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(7):before {
+        content: "SOCIAL MEDIA";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(8):before {
+        content: "UI/UX";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(9):before {
+        content: "UI/UX";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(10):before {
+        content: "UI/UX";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(11):before {
+        content: "DEVELOPMENT";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(12):before {
+        content: "DEVELOPMENT";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(13):before {
+        content: "DEVELOPMENT";
+      }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
 
 <body id="body" class="">
   <!-- Navbar -->
