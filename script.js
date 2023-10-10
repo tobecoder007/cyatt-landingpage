@@ -110,17 +110,82 @@ const swiper1 = new Swiper(".swiper1", {
 });
 
 
-// Pricing Card
-const swiper = new Swiper(".swiper", {
+// portfolio Slider
+const portfolioswiper = new Swiper(".portfolioswiper", {
   // Optional parameters
   direction: "horizontal",
-  slidesPerView: 1,
-  initialSlide: 1,
   loop: true,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
+
+
+// Testimonial Slider
+const testimonialswiper = new Swiper(".testimonialswiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
+
+// Pricing Card
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  // slidesPerView: 1,
+  // initialSlide: 1,
+  // loop: true,
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
