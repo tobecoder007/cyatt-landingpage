@@ -195,7 +195,7 @@ const portfolioswiper = new Swiper(".portfolioswiper", {
   loop: true,
   autoplay: {
     delay: 5000,
-    disableOnInteraction: false,
+    disableOnInteraction: true,
   },
   navigation: {
     nextEl: ".swiper-button-next",
