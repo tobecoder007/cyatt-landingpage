@@ -109,10 +109,6 @@ const swiper1 = new Swiper(".swiper1", {
   },
 });
 
-
-
-
-
 // Testimonial Slider
 const testimonialswiper = new Swiper(".testimonialswiper", {
   // Optional parameters
@@ -192,7 +188,6 @@ const swiper = new Swiper(".swiper", {
 const swiperSlideNext = document.querySelector(".swiper").swiper;
 swiperSlideNext.slideNext();
 
-
 // portfolio Slider
 const portfolioswiper = new Swiper(".portfolioswiper", {
   // Optional parameters
@@ -224,7 +219,6 @@ const portfolioswiper = new Swiper(".portfolioswiper", {
     el: ".swiper-scrollbar",
   },
 });
-
 
 // Roll over
 const swiper2 = new Swiper(".swiper2", {
@@ -260,8 +254,6 @@ const swiper2 = new Swiper(".swiper2", {
     el: ".swiper-scrollbar",
   },
 });
-
-
 
 // Form Appwrite Connection
 function formValidate() {
@@ -439,3 +431,18 @@ inOfficeRadio.addEventListener("change", function () {
   virtualOption.style.backgroundColor = "transparent";
 });
 
+const iframeDesktop = document.getElementById("idesktop");
+const iframeTablet = document.getElementById("itablet");
+const iframePhone = document.getElementById("iphone");
+
+const iframeSection = document.getElementById("iframeSection");
+
+iframeDesktop.addEventListener("click", () => {
+  iframeSection.style.width = "1240px";
+});
+iframeTablet.addEventListener("click", () => {
+  iframeSection.style.width = "768px";
+});
+iframePhone.addEventListener("click", () => {
+  iframeSection.style.width = "360px";
+});
