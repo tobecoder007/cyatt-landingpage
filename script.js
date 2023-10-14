@@ -188,14 +188,18 @@ const swiper = new Swiper(".swiper", {
 const swiperSlideNext = document.querySelector(".swiper").swiper;
 swiperSlideNext.slideNext();
 
+
 // portfolio Slider
+
 const portfolioswiper = new Swiper(".portfolioswiper", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
   autoplay: {
+
     delay: 3000,
     disableOnInteraction: false,
+
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -261,6 +265,7 @@ function formValidate() {
   let trimName = username.trimStart();
   let useremail = document.getElementById("email").value;
   let usercontact = document.getElementById("contact").value;
+  console.log({ usercontact });
 
   let nameErr = document.getElementById("error-name");
   let emailErr = document.getElementById("error-email");
@@ -289,7 +294,6 @@ function formValidate() {
   } else {
     emailErr.innerText = "";
   }
-
   if (!usercontact) {
     contactErr.innerText = "Phone Number is required";
   } else if (phoneR == false) {
