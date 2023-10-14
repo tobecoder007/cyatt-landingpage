@@ -110,37 +110,7 @@ const swiper1 = new Swiper(".swiper1", {
 });
 
 
-// portfolio Slider
-const portfolioswiper = new Swiper(".portfolioswiper", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
 
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
 
 
 // Testimonial Slider
@@ -222,6 +192,40 @@ const swiper = new Swiper(".swiper", {
 const swiperSlideNext = document.querySelector(".swiper").swiper;
 swiperSlideNext.slideNext();
 
+
+// portfolio Slider
+const portfolioswiper = new Swiper(".portfolioswiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
+
+
 // Roll over
 const swiper2 = new Swiper(".swiper2", {
   draggable: true,
@@ -256,6 +260,8 @@ const swiper2 = new Swiper(".swiper2", {
     el: ".swiper-scrollbar",
   },
 });
+
+
 
 // Form Appwrite Connection
 function formValidate() {
