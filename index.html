@@ -1899,10 +1899,16 @@
         Our latest work
       </h2>
       <div class="py-2 justify-end items-end flex gap-2">
-        <button class="border px-4 py-2 rounded-lg" id="idesktop">
+        <button
+          class="border px-4 py-2 rounded-lg hidden lg:block"
+          id="idesktop"
+        >
           <i class="fa-solid fa-desktop"></i>
         </button>
-        <button class="border px-4 py-2 rounded-lg" id="itablet">
+        <button
+          class="border px-4 py-2 rounded-lg hidden md:block"
+          id="itablet"
+        >
           <i class="fa-solid fa-tablet"></i>
         </button>
         <button class="border px-4 py-2 rounded-lg" id="iphone">
@@ -1913,7 +1919,7 @@
         <iframe
           id="iframeSection"
           src="https://bsidesahmedabad.in/"
-          height="700"
+          height="800"
           width="1240"
           name="iframe"
           title="This is my video"
@@ -1922,7 +1928,7 @@
     </div>
 
     <!-- Portfolio -->
-    <div class="max-w-7xl px-4 mx-auto">
+    <div class="max-w-7xl mt-10 px-4 mx-auto">
       <div
         class="pt-6 px-4 before:w-full uppercase text-xl font-semibold inline-block hover:scale-x-110 relative"
       ></div>
@@ -2072,8 +2078,8 @@
             </div>
           </div>
           <div class="swiper-pagination mt-4"></div>
-          <div class="swiper-button-prev cursor-pointer hidden md:block"></div>
-          <div class="swiper-button-next cursor-pointer hidden md:block"></div>
+          <div class="swiper-button-prev cursor-pointer"></div>
+          <div class="swiper-button-next cursor-pointer"></div>
           <!-- <div class="swiper-scrollbar hidden"></div> -->
         </div>
       </div>

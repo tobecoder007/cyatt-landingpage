@@ -77,7 +77,7 @@ function rotate() {
   rotateElm = !rotateElm;
 }
 
-// Logo slider
+// // Logo slider
 const swiper1 = new Swiper(".swiper1", {
   // Optional parameters
   direction: "horizontal",
@@ -109,42 +109,12 @@ const swiper1 = new Swiper(".swiper1", {
   },
 });
 
-// Testimonial Slider
-const testimonialswiper = new Swiper(".testimonialswiper", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
-
-// Pricing Card
+// // Pricing Card
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
+  allowTouchMove: false,
+
   // slidesPerView: 1,
   // initialSlide: 1,
   // loop: true,
@@ -198,14 +168,12 @@ const portfolioswiper = new Swiper(".portfolioswiper", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
-  // centeredSlides: true,
-  // slidesPerView: 3,
-  // allowTouchMove: false,
-  autoplayDisableOnInteraction: true,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: true,
-  // },
+  slidesPerView: 1,
+  allowTouchMove: false,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: true,
+  },
 
   navigation: {
     nextEl: ".swiper-button-next",
@@ -232,7 +200,6 @@ const portfolioswiper = new Swiper(".portfolioswiper", {
         "DEVELOPMENT",
         "DEVELOPMENT",
       ];
-
       return `<span class=${className}>${arr[index]}</span>`;
     },
   },
@@ -242,6 +209,38 @@ const portfolioswiper = new Swiper(".portfolioswiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: false,
+  },
+});
+// // Testimonial Slider
+const testimonialswiper = new Swiper(".testimonialswiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
   // And if we need scrollbar
   scrollbar: {
     el: ".swiper-scrollbar",
