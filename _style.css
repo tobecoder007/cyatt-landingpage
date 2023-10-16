@@ -482,3 +482,7 @@ button:has(:first-child:active)::before,
 button:has(:last-child:active)::before {
   transition: transform 500ms, opacity 250ms;
 }
+
+.active {
+  background-color: #c9f31d;
+}

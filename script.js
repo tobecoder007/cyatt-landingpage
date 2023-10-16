@@ -466,10 +466,19 @@ const iframeSection = document.getElementById("iframeSection");
 
 iframeDesktop.addEventListener("click", () => {
   iframeSection.style.width = "1240px";
+  iframeDesktop.classList.add("active");
+  iframeTablet.classList.remove("active");
+  iframePhone.classList.remove("active");
 });
 iframeTablet.addEventListener("click", () => {
   iframeSection.style.width = "768px";
+  iframeTablet.classList.add("active");
+  iframePhone.classList.remove("active");
+  iframeDesktop.classList.remove("active");
 });
 iframePhone.addEventListener("click", () => {
   iframeSection.style.width = "360px";
+  iframePhone.classList.add("active");
+  iframeTablet.classList.remove("active");
+  iframeDesktop.classList.remove("active");
 });

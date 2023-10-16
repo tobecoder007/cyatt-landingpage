@@ -2017,6 +2017,10 @@ button:has(:last-child:active)::before {
   transition: transform 500ms, opacity 250ms;
 }
 
+.active {
+  background-color: #c9f31d;
+}
+
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
