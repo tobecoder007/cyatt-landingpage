@@ -77,8 +77,43 @@ function rotate() {
   rotateElm = !rotateElm;
 }
 
+//Text Swiper  Roll over
+const textswiper = new Swiper(".textswiper", {
+  draggable: true,
+  freemode: true,
+  speed: 3000,
+  spaceBetween: 30,
+
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  allowTouchMove: false,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+
+  breakpoints: {
+    // 300: {
+    //   slidesPerView: 2,
+    //   slidesPerColumn: 2,
+    // },
+    640: {
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+    },
+    1024: {
+      slidesPerView: 5,
+      slidesPerColumn: 2,
+    },
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
+
 // // Logo slider
-const swiper1 = new Swiper(".swiper1", {
+const logoswiper = new Swiper(".logoswiper", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
@@ -108,61 +143,6 @@ const swiper1 = new Swiper(".swiper1", {
     el: ".swiper-scrollbar",
   },
 });
-
-// // Pricing Card
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  direction: "horizontal",
-  allowTouchMove: false,
-
-  slidesPerView: 1,
-  initialSlide: 1,
-  // loop: true,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false,
-  // },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    renderBullet: function (index, className) {
-      const arr = ["Basic", "Advanced", "Professional"];
-
-      return `<span class=${className}>${arr[index]}</span>`;
-    },
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
-console.log({ swiper });
-(() => {
-  const swiperSliders = swiper[1].slides;
-
-  const slidersHeight = swiperSliders.map((swiper) => swiper.clientHeight);
-
-  swiper[1].on("activeIndexChange", (swiper) => {
-    const activeIndex = swiper.realIndex;
-
-    swiper.el.style.height = slidersHeight[activeIndex] + 100 + "px";
-  });
-})();
-const swiperSlideNext = document.querySelector(".swiper").swiper;
-swiperSlideNext.slideNext();
 
 // portfolio Slider
 const portfolioswiper = new Swiper(".portfolioswiper", {
@@ -216,6 +196,7 @@ const portfolioswiper = new Swiper(".portfolioswiper", {
     draggable: false,
   },
 });
+
 // // Testimonial Slider
 const testimonialswiper = new Swiper(".testimonialswiper", {
   // Optional parameters
@@ -234,7 +215,7 @@ const testimonialswiper = new Swiper(".testimonialswiper", {
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
-    clickable: false,
+    // clickable: false,
   },
 
   // Navigation arrows
@@ -249,40 +230,62 @@ const testimonialswiper = new Swiper(".testimonialswiper", {
   },
 });
 
-// Roll over
-const swiper2 = new Swiper(".swiper2", {
-  draggable: true,
-  freemode: true,
-  speed: 3000,
-  spaceBetween: 30,
-
+// // Pricing Card
+const pricingswiper = new Swiper(".pricingswiper", {
   // Optional parameters
   direction: "horizontal",
-  loop: true,
   allowTouchMove: false,
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false,
+
+  // slidesPerView: 1,
+  // initialSlide: 1,
+  // loop: true,
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 
-  breakpoints: {
-    // 300: {
-    //   slidesPerView: 2,
-    //   slidesPerColumn: 2,
-    // },
-    640: {
-      slidesPerView: 2,
-      slidesPerColumn: 2,
-    },
-    1024: {
-      slidesPerView: 5,
-      slidesPerColumn: 2,
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      const arr = ["Basic", "Advanced", "Professional"];
+
+      return `<span class=${className}>${arr[index]}</span>`;
     },
   },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
   scrollbar: {
     el: ".swiper-scrollbar",
   },
 });
+(() => {
+  const swiperSliders = pricingswiper.slides;
+
+  const slidersHeight = swiperSliders.map((swiper) => swiper.clientHeight);
+  console.log({ slidersHeight, pricingswiper });
+
+  const handleEvent = (swiper) => {
+    const activeIndex = swiper.realIndex;
+
+    pricingswiper.el.style.height = slidersHeight[activeIndex] + 100 + "px";
+  };
+
+  pricingswiper.on("activeIndexChange", handleEvent);
+
+  handleEvent(pricingswiper);
+})();
 
 // Form Appwrite Connection
 function formValidate() {
