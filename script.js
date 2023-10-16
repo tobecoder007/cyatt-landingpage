@@ -109,60 +109,6 @@ const swiper1 = new Swiper(".swiper1", {
   },
 });
 
-// // Pricing Card
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  direction: "horizontal",
-  allowTouchMove: false,
-
-  // slidesPerView: 1,
-  // initialSlide: 1,
-  // loop: true,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false,
-  // },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    renderBullet: function (index, className) {
-      const arr = ["Basic", "Advanced", "Professional"];
-
-      return `<span class=${className}>${arr[index]}</span>`;
-    },
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
-(() => {
-  const swiperSliders = swiper[0].slides;
-
-  const slidersHeight = swiperSliders.map((swiper) => swiper.clientHeight);
-
-  swiper[0].on("activeIndexChange", (swiper) => {
-    const activeIndex = swiper.realIndex;
-
-    swiper.el.style.height = slidersHeight[activeIndex] + 100 + "px";
-  });
-})();
-const swiperSlideNext = document.querySelector(".swiper").swiper;
-swiperSlideNext.slideNext();
-
 // portfolio Slider
 const portfolioswiper = new Swiper(".portfolioswiper", {
   // Optional parameters
@@ -215,6 +161,62 @@ const portfolioswiper = new Swiper(".portfolioswiper", {
     draggable: false,
   },
 });
+
+// // Pricing Card
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  allowTouchMove: false,
+
+  // slidesPerView: 1,
+  // initialSlide: 1,
+  // loop: true,
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      const arr = ["Basic", "Advanced", "Professional"];
+
+      return `<span class=${className}>${arr[index]}</span>`;
+    },
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
+console.log({ swiper });
+(() => {
+  const swiperSliders = swiper[1].slides;
+
+  const slidersHeight = swiperSliders.map((swiper) => swiper.clientHeight);
+
+  swiper[1].on("activeIndexChange", (swiper) => {
+    const activeIndex = swiper.realIndex;
+
+    swiper.el.style.height = slidersHeight[activeIndex] + 100 + "px";
+  });
+})();
+const swiperSlideNext = document.querySelector(".swiper").swiper;
+swiperSlideNext.slideNext();
+
 // // Testimonial Slider
 const testimonialswiper = new Swiper(".testimonialswiper", {
   // Optional parameters

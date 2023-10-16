@@ -82,10 +82,6 @@
         z-index: 1;
       }
 
-      /* .swiper-slide{
-        height: 650px;
-      }*/
-
       .swiper-slide-active {
         height: 100%;
       }
@@ -110,18 +106,6 @@
         cursor: pointer;
         font-weight: 600;
       }
-
-      /* .swiper-pagination-bullet:nth-child(1):before {
-        content: "Basic";
-      }
-
-      .swiper-pagination-bullet:nth-child(2):before {
-        content: "Advanced";
-      }
-
-      .swiper-pagination-bullet:nth-child(3):before {
-        content: "Professional";
-      } */
 
       .portfolioSwiper .swiper-pagination-bullet {
         display: none;
@@ -745,7 +729,210 @@
       </div>
     </div>
 
-    <!-- Pricing Box For Mobile -->
+    <!-- portfolio upper -->
+
+    <!-- Our Last Prooject -->
+    <div class="max-w-7xl px-4 mx-auto">
+      <div
+        class="pt-6 px-4 pb-6 before:w-full txt uppercase text-xl font-semibold inline-block hover:scale-x-110 relative"
+      >
+        <h2
+          class="relative before:absolute cursor-pointer before:top-7 before:w-0 before:h-1 hover:before:w-[100%] txt"
+        >
+          Our Portfolio
+        </h2>
+      </div>
+      <h2 class="max-w-2xl text-3xl md:text-5xl font-bold py-8">
+        Our latest work
+      </h2>
+      <div class="py-2 justify-end items-end flex gap-2">
+        <button
+          class="active border px-4 py-2 rounded-lg hidden lg:block"
+          id="idesktop"
+        >
+          <i class="fa-solid fa-desktop"></i>
+        </button>
+        <button
+          class="border px-4 py-2 rounded-lg hidden md:block"
+          id="itablet"
+        >
+          <i class="fa-solid fa-tablet"></i>
+        </button>
+        <button class="border px-4 py-2 rounded-lg" id="iphone">
+          <i class="fa-solid fa-mobile"></i>
+        </button>
+      </div>
+      <div class="h-[800px] max-w-7xl mx-auto flex justify-center">
+        <iframe
+          id="iframeSection"
+          src="https://bsidesahmedabad.in/"
+          height="800"
+          width="1240"
+          name="iframe"
+          title="This is my video"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Portfolio -->
+    <div class="max-w-7xl mt-10 px-4 mx-auto">
+      <div
+        class="pt-6 px-4 before:w-full uppercase text-xl font-semibold inline-block hover:scale-x-110 relative"
+      ></div>
+      <div class="portfolioSwiper">
+        <div class="swiper portfolioswiper max-w-7xl mx-auto rounded-2xl">
+          <div class="swiper-wrapper flex">
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="flex justify-center items-center px-4">
+                <img
+                  class="md:w-[672px] md:h-[672px]"
+                  src="assets/bsides-ahm-event-sold-out.jpg"
+                  alt="our_portfolio"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="md:w-[672px] md:h-[672px]"
+                    src="./assets/bsides-ahm-lanyard-sponsor.jpg"
+                    alt="our_portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="md:w-[672px] md:h-[672px]"
+                    src="./assets/client-branding.jpg"
+                    alt="our_portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="md:w-[672px] md:h-[672px]"
+                    src="./assets/client-branding-design.jpg"
+                    alt="our_portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="md:w-[672px] md:h-[672px]"
+                    src="./assets/client-logos-sample.png"
+                    alt="our_portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="w-full md:w-[672px] md:h-[672px]"
+                    src="./assets/business-logos.png"
+                    alt="our_portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="w-full md:w-[672px] md:h-[672px]"
+                    src="./assets/fitful-post-3.jpg"
+                    alt="our_portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="w-full md:w-[672px] md:h-[672px]"
+                    src="./assets/home-pages-mock-up.png"
+                    alt="our_portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="w-full md:w-[672px] md:h-[672px]"
+                    src="./assets/dao-ui-ux.png"
+                    alt="our_portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="w-full md:w-[672px] md:h-[672px]"
+                    src="./assets/gardening-homepage.png"
+                    alt="our_portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="w-full md:w-[672px] md:h-[672px]"
+                    src="./assets/visual-designer-mock-up.jpg"
+                    alt="our_portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="w-full md:w-[672px] md:h-[672px]"
+                    src="./assets/website-hosting-mock-up.jpg"
+                    alt="our_portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="w-full md:w-[672px] md:h-[672px]"
+                    src="./assets/real-estate-mockup.jpg"
+                    alt="our_portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination mt-4"></div>
+          <div class="swiper-button-prev cursor-pointer"></div>
+          <div class="swiper-button-next cursor-pointer"></div>
+          <!-- <div class="swiper-scrollbar hidden"></div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing Box Content For Mobile -->
     <div class="pt-20 block md:hidden max-w-sm px-4 mx-auto">
       <div
         class="max-w-5xl w-[80%] mx-auto bg-[#c9f31d] relative h-16 rounded-full top-10"
@@ -1150,209 +1337,6 @@
         >
           Avail Now
         </button>
-      </div>
-    </div>
-
-    <!-- portfolio upper -->
-
-    <!-- Our Last Prooject -->
-    <div class="max-w-7xl px-4 mx-auto">
-      <div
-        class="pt-6 px-4 pb-6 before:w-full txt uppercase text-xl font-semibold inline-block hover:scale-x-110 relative"
-      >
-        <h2
-          class="relative before:absolute cursor-pointer before:top-7 before:w-0 before:h-1 hover:before:w-[100%] txt"
-        >
-          Our Portfolio
-        </h2>
-      </div>
-      <h2 class="max-w-2xl text-3xl md:text-5xl font-bold py-8">
-        Our latest work
-      </h2>
-      <div class="py-2 justify-end items-end flex gap-2">
-        <button
-          class="active border px-4 py-2 rounded-lg hidden lg:block"
-          id="idesktop"
-        >
-          <i class="fa-solid fa-desktop"></i>
-        </button>
-        <button
-          class="border px-4 py-2 rounded-lg hidden md:block"
-          id="itablet"
-        >
-          <i class="fa-solid fa-tablet"></i>
-        </button>
-        <button class="border px-4 py-2 rounded-lg" id="iphone">
-          <i class="fa-solid fa-mobile"></i>
-        </button>
-      </div>
-      <div class="h-[800px] max-w-7xl mx-auto flex justify-center">
-        <iframe
-          id="iframeSection"
-          src="https://bsidesahmedabad.in/"
-          height="800"
-          width="1240"
-          name="iframe"
-          title="This is my video"
-        ></iframe>
-      </div>
-    </div>
-
-    <!-- Portfolio -->
-    <div class="max-w-7xl mt-10 px-4 mx-auto">
-      <div
-        class="pt-6 px-4 before:w-full uppercase text-xl font-semibold inline-block hover:scale-x-110 relative"
-      ></div>
-      <div class="portfolioSwiper">
-        <div class="swiper portfolioswiper max-w-7xl mx-auto rounded-2xl">
-          <div class="swiper-wrapper flex">
-            <div class="swiper-slide px-4 md:px-0">
-              <div class="flex justify-center items-center px-4">
-                <img
-                  class="md:w-[672px] md:h-[672px]"
-                  src="assets/bsides-ahm-event-sold-out.jpg"
-                  alt="our_portfolio"
-                />
-              </div>
-            </div>
-            <div class="swiper-slide px-4 md:px-0">
-              <div class="rounded-2xl max-w-7xl mx-auto">
-                <div class="flex justify-center items-center px-4">
-                  <img
-                    class="md:w-[672px] md:h-[672px]"
-                    src="./assets/bsides-ahm-lanyard-sponsor.jpg"
-                    alt="our_portfolio"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide px-4 md:px-0">
-              <div class="rounded-2xl max-w-7xl mx-auto">
-                <div class="flex justify-center items-center px-4">
-                  <img
-                    class="md:w-[672px] md:h-[672px]"
-                    src="./assets/client-branding.jpg"
-                    alt="our_portfolio"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide px-4 md:px-0">
-              <div class="rounded-2xl max-w-7xl mx-auto">
-                <div class="flex justify-center items-center px-4">
-                  <img
-                    class="md:w-[672px] md:h-[672px]"
-                    src="./assets/client-branding-design.jpg"
-                    alt="our_portfolio"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide px-4 md:px-0">
-              <div class="rounded-2xl max-w-7xl mx-auto">
-                <div class="flex justify-center items-center px-4">
-                  <img
-                    class="md:w-[672px] md:h-[672px]"
-                    src="./assets/client-logos-sample.png"
-                    alt="our_portfolio"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide px-4 md:px-0">
-              <div class="rounded-2xl max-w-7xl mx-auto">
-                <div class="flex justify-center items-center px-4">
-                  <img
-                    class="w-full md:w-[672px] md:h-[672px]"
-                    src="./assets/business-logos.png"
-                    alt="our_portfolio"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide px-4 md:px-0">
-              <div class="rounded-2xl max-w-7xl mx-auto">
-                <div class="flex justify-center items-center px-4">
-                  <img
-                    class="w-full md:w-[672px] md:h-[672px]"
-                    src="./assets/fitful-post-3.jpg"
-                    alt="our_portfolio"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide px-4 md:px-0">
-              <div class="rounded-2xl max-w-7xl mx-auto">
-                <div class="flex justify-center items-center px-4">
-                  <img
-                    class="w-full md:w-[672px] md:h-[672px]"
-                    src="./assets/home-pages-mock-up.png"
-                    alt="our_portfolio"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide px-4 md:px-0">
-              <div class="rounded-2xl max-w-7xl mx-auto">
-                <div class="flex justify-center items-center px-4">
-                  <img
-                    class="w-full md:w-[672px] md:h-[672px]"
-                    src="./assets/dao-ui-ux.png"
-                    alt="our_portfolio"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide px-4 md:px-0">
-              <div class="rounded-2xl max-w-7xl mx-auto">
-                <div class="flex justify-center items-center px-4">
-                  <img
-                    class="w-full md:w-[672px] md:h-[672px]"
-                    src="./assets/gardening-homepage.png"
-                    alt="our_portfolio"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide px-4 md:px-0">
-              <div class="rounded-2xl max-w-7xl mx-auto">
-                <div class="flex justify-center items-center px-4">
-                  <img
-                    class="w-full md:w-[672px] md:h-[672px]"
-                    src="./assets/visual-designer-mock-up.jpg"
-                    alt="our_portfolio"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide px-4 md:px-0">
-              <div class="rounded-2xl max-w-7xl mx-auto">
-                <div class="flex justify-center items-center px-4">
-                  <img
-                    class="w-full md:w-[672px] md:h-[672px]"
-                    src="./assets/website-hosting-mock-up.jpg"
-                    alt="our_portfolio"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide px-4 md:px-0">
-              <div class="rounded-2xl max-w-7xl mx-auto">
-                <div class="flex justify-center items-center px-4">
-                  <img
-                    class="w-full md:w-[672px] md:h-[672px]"
-                    src="./assets/real-estate-mockup.jpg"
-                    alt="our_portfolio"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination mt-4"></div>
-          <div class="swiper-button-prev cursor-pointer"></div>
-          <div class="swiper-button-next cursor-pointer"></div>
-          <!-- <div class="swiper-scrollbar hidden"></div> -->
-        </div>
       </div>
     </div>
 
