@@ -149,7 +149,7 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-scrollbar",
   },
 });
-console.log({ swiper });
+// console.log({ swiper });
 (() => {
   const swiperSliders = swiper[1].slides;
 
