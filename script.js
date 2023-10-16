@@ -109,67 +109,14 @@ const swiper1 = new Swiper(".swiper1", {
   },
 });
 
-// portfolio Slider
-const portfolioswiper = new Swiper(".portfolioswiper", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: true,
-  slidesPerView: 1,
-  allowTouchMove: false,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: true,
-  },
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: false,
-    renderBullet: function (index, className) {
-      const arr = [
-        "BRANDING",
-        "BRANDING",
-        "DESIGN",
-        "MARKETING",
-        "LOGO DESIGN",
-        "LOGO DESIGN",
-        "SOCIAL MEDIA",
-        "UI/UX",
-        "UI/UX",
-        "UI/UX",
-        "DEVELOPMENT",
-        "DEVELOPMENT",
-        "DEVELOPMENT",
-      ];
-      return `<span class=${className}>${arr[index]}</span>`;
-    },
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: false,
-  },
-});
-
 // // Pricing Card
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
   allowTouchMove: false,
 
-  // slidesPerView: 1,
-  // initialSlide: 1,
+  slidesPerView: 1,
+  initialSlide: 1,
   // loop: true,
   // autoplay: {
   //   delay: 3000,
@@ -217,6 +164,58 @@ console.log({ swiper });
 const swiperSlideNext = document.querySelector(".swiper").swiper;
 swiperSlideNext.slideNext();
 
+// portfolio Slider
+const portfolioswiper = new Swiper(".portfolioswiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: 1,
+  allowTouchMove: false,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: true,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: false,
+    renderBullet: function (index, className) {
+      const arr = [
+        "BRANDING",
+        "BRANDING",
+        "DESIGN",
+        "MARKETING",
+        "LOGO DESIGN",
+        "LOGO DESIGN",
+        "SOCIAL MEDIA",
+        "UI/UX",
+        "UI/UX",
+        "UI/UX",
+        "DEVELOPMENT",
+        "DEVELOPMENT",
+        "DEVELOPMENT",
+      ];
+      return `<span class=${className}>${arr[index]}</span>`;
+    },
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: false,
+  },
+});
 // // Testimonial Slider
 const testimonialswiper = new Swiper(".testimonialswiper", {
   // Optional parameters
