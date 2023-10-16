@@ -195,7 +195,7 @@ const portfolioswiper = new Swiper(".portfolioswiper", {
         "SOCIAL MEDIA",
         "UI/UX",
         "UI/UX",
-        "DEVELOPMENT",
+        "UI/UX",
         "DEVELOPMENT",
         "DEVELOPMENT",
         "DEVELOPMENT",
@@ -232,7 +232,7 @@ const testimonialswiper = new Swiper(".testimonialswiper", {
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
+    clickable: false,
   },
 
   // Navigation arrows
