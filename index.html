@@ -29,7 +29,6 @@
       href="https://fonts.googleapis.com/css2?family=Dosis&family=Kanit:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
     <style>
       @keyframes upper {
@@ -112,7 +111,7 @@
         font-weight: 600;
       }
 
-      .swiper-pagination-bullet:nth-child(1):before {
+      /* .swiper-pagination-bullet:nth-child(1):before {
         content: "Basic";
       }
 
@@ -122,11 +121,8 @@
 
       .swiper-pagination-bullet:nth-child(3):before {
         content: "Professional";
-      }
+      } */
 
-      .swiper-pagination-bullet-active {
-        background-color: #c9f31d;
-      }
       .portfolioSwiper .swiper-pagination-bullet {
         display: none;
       }
@@ -140,45 +136,6 @@
 
       .swiper-pagination-bullet-active {
         background-color: #c9f31d;
-      }
-      .portfolioSwiper .swiper-pagination-bullet:nth-child(1):before {
-        content: "BRANDING";
-      }
-      .portfolioSwiper .swiper-pagination-bullet:nth-child(2):before {
-        content: "BRANDING";
-      }
-      .portfolioSwiper .swiper-pagination-bullet:nth-child(3):before {
-        content: "DESIGN";
-      }
-      .portfolioSwiper .swiper-pagination-bullet:nth-child(4):before {
-        content: "MARKETING";
-      }
-      .portfolioSwiper .swiper-pagination-bullet:nth-child(5):before {
-        content: "LOGO DESIGN";
-      }
-      .portfolioSwiper .swiper-pagination-bullet:nth-child(6):before {
-        content: "LOGO DESIGN";
-      }
-      .portfolioSwiper .swiper-pagination-bullet:nth-child(7):before {
-        content: "SOCIAL MEDIA";
-      }
-      .portfolioSwiper .swiper-pagination-bullet:nth-child(8):before {
-        content: "UI/UX";
-      }
-      .portfolioSwiper .swiper-pagination-bullet:nth-child(9):before {
-        content: "UI/UX";
-      }
-      .portfolioSwiper .swiper-pagination-bullet:nth-child(10):before {
-        content: "UI/UX";
-      }
-      .portfolioSwiper .swiper-pagination-bullet:nth-child(11):before {
-        content: "DEVELOPMENT";
-      }
-      .portfolioSwiper .swiper-pagination-bullet:nth-child(12):before {
-        content: "DEVELOPMENT";
-      }
-      .portfolioSwiper .swiper-pagination-bullet:nth-child(13):before {
-        content: "DEVELOPMENT";
       }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -1941,11 +1898,23 @@
       <h2 class="max-w-2xl text-3xl md:text-5xl font-bold py-8">
         Our latest work
       </h2>
-      <div class="pt-10 w-full h-[800px]">
+      <div class="py-2 justify-end items-end flex gap-2">
+        <button class="border px-4 py-2 rounded-lg" id="idesktop">
+          <i class="fa-solid fa-desktop"></i>
+        </button>
+        <button class="border px-4 py-2 rounded-lg" id="itablet">
+          <i class="fa-solid fa-tablet"></i>
+        </button>
+        <button class="border px-4 py-2 rounded-lg" id="iphone">
+          <i class="fa-solid fa-mobile"></i>
+        </button>
+      </div>
+      <div class="h-[800px] max-w-7xl mx-auto flex justify-center">
         <iframe
+          id="iframeSection"
           src="https://bsidesahmedabad.in/"
-          class="w-full"
           height="700"
+          width="1240"
           name="iframe"
           title="This is my video"
         ></iframe>
@@ -1956,17 +1925,11 @@
     <div class="max-w-7xl px-4 mx-auto">
       <div
         class="pt-6 px-4 before:w-full uppercase text-xl font-semibold inline-block hover:scale-x-110 relative"
-      >
-        <!-- <h2
-  class="cursor-pointer  pt-6 px-4 before:w-full txt txt3 relative uppercase text-xl font-semibold inline-block hover:scale-x-110">
-  Our Portfolio
-</h2> -->
-      </div>
+      ></div>
       <div class="portfolioSwiper">
-        <div class="swiper portfolioswiper max-w-4xl mx-auto rounded-2xl">
+        <div class="swiper portfolioswiper max-w-7xl mx-auto rounded-2xl">
           <div class="swiper-wrapper flex">
             <div class="swiper-slide px-4 md:px-0">
-              <!-- <div class="rounded-2xl w-full px-20 mx-auto"> -->
               <div class="flex justify-center items-center px-4">
                 <img
                   class="md:w-[672px] md:h-[672px]"
@@ -1974,7 +1937,6 @@
                   alt="Our Portfolio"
                 />
               </div>
-              <!-- </div> -->
             </div>
             <div class="swiper-slide px-4 md:px-0">
               <div class="rounded-2xl max-w-7xl mx-auto">
@@ -2110,8 +2072,8 @@
             </div>
           </div>
           <div class="swiper-pagination mt-4"></div>
-          <div class="swiper-button-prev cursor-pointer block"></div>
-          <div class="swiper-button-next cursor-pointer block"></div>
+          <div class="swiper-button-prev cursor-pointer hidden md:block"></div>
+          <div class="swiper-button-next cursor-pointer hidden md:block"></div>
           <!-- <div class="swiper-scrollbar hidden"></div> -->
         </div>
       </div>

@@ -161,6 +161,11 @@ const swiper = new Swiper(".swiper", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    renderBullet: function (index, className) {
+      const arr = ["Basic", "Advanced", "Professional"];
+
+      return `<span class=${className}>${arr[index]}</span>`;
+    },
   },
 
   // Navigation arrows
@@ -188,19 +193,20 @@ const swiper = new Swiper(".swiper", {
 const swiperSlideNext = document.querySelector(".swiper").swiper;
 swiperSlideNext.slideNext();
 
-
 // portfolio Slider
-
 const portfolioswiper = new Swiper(".portfolioswiper", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
-  autoplay: {
+  // centeredSlides: true,
+  // slidesPerView: 3,
+  // allowTouchMove: false,
+  autoplayDisableOnInteraction: true,
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: true,
+  // },
 
-    delay: 3000,
-    disableOnInteraction: false,
-
-  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -209,7 +215,26 @@ const portfolioswiper = new Swiper(".portfolioswiper", {
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
+    clickable: false,
+    renderBullet: function (index, className) {
+      const arr = [
+        "BRANDING",
+        "BRANDING",
+        "DESIGN",
+        "MARKETING",
+        "LOGO DESIGN",
+        "LOGO DESIGN",
+        "SOCIAL MEDIA",
+        "UI/UX",
+        "UI/UX",
+        "DEVELOPMENT",
+        "DEVELOPMENT",
+        "DEVELOPMENT",
+        "DEVELOPMENT",
+      ];
+
+      return `<span class=${className}>${arr[index]}</span>`;
+    },
   },
 
   // Navigation arrows
@@ -217,7 +242,6 @@ const portfolioswiper = new Swiper(".portfolioswiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-
   // And if we need scrollbar
   scrollbar: {
     el: ".swiper-scrollbar",
