@@ -174,12 +174,13 @@ const portfolioswiper = new Swiper(".portfolioswiper", {
         "LOGO DESIGN",
         "LOGO DESIGN",
         "SOCIAL MEDIA",
-        // "UI/UX",
-        // "UI/UX",
-        // "UI/UX",
-        // "DEVELOPMENT",
-        // "DEVELOPMENT",
-        // "DEVELOPMENT",
+        "BRANDING",
+        "DESIGN",
+        "DESIGN",
+        "BRANDING",
+        "BRANDING",
+        "DESIGN",
+        "BRANDING"
       ];
       return `<span class=${className}>${arr[index]}</span>`;
     },
