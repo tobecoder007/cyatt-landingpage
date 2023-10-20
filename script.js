@@ -153,7 +153,7 @@ const portfolioswiper = new Swiper(".portfolioswiper", {
   allowTouchMove: false,
   autoplay: {
     delay: 2000,
-    disableOnInteraction: true,
+    disableOnInteraction: false,
   },
 
   navigation: {
