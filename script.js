@@ -154,6 +154,7 @@ const portfolioswiper = new Swiper(".portfolioswiper", {
   autoplay: {
     delay: 2000,
     disableOnInteraction: false,
+    pauseOnMouseEnter: true,
   },
 
   navigation: {
